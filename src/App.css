@@ -1,38 +1,96 @@
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+a,
+p,
+label,
+h3,
+h1,
+h2,
+h4,
+h5,
+h6,
+button,
+span:not(.orange),
+div {
+  color: #eee;
+}
+
+sup {
+  color: #eee !important;
+}
+
 .App {
-  text-align: center;
+  background-color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loader {
+  align-items: center;
+  background: #333;
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 1s linear;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader h3 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  /* opacity: 0; */
+}
+
+.load {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100%;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.Toaster__alert_close {
+  padding-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Toaster__alert_close span {
+  color: #000 !important;
+  height: fit-content;
+}
+
+@media (max-width: 680px) {
+  #mu-about-us {
+    padding: 50px 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  #mu-restaurant-menu {
+    padding: 60px 0;
+  }
+
+  #mu-restaurant-menu
+    .mu-restaurant-menu-area
+    .mu-restaurant-menu-content
+    .mu-restaurant-menu
+    li {
+    padding-bottom: 25px;
+    float: left;
   }
 }

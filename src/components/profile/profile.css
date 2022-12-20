@@ -1,0 +1,235 @@
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  height: 80%;
+  background-color: #353535;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card .modal-header::before,
+.modal-card .modal-header::after {
+  content: "";
+  display: none;
+}
+
+.modal-card .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eee;
+}
+
+.modal-card .modal-header h4 {
+  color: #eee;
+  margin: 0;
+}
+
+.modal-card .modal-header i {
+  align-self: flex-start;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-card .modal-body {
+  flex: 1;
+  min-height: 470px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-card.order .modal-body {
+  min-height: 490px;
+}
+
+.modal-card .modal-body .left {
+  width: 40%;
+}
+
+.modal-card .modal-body .left .mb-3 {
+  margin-bottom: 10px;
+}
+
+.modal-card .modal-body .right {
+  width: 52%;
+  padding-left: 20px;
+  padding-right: 5px;
+  border-left: 1px solid #eee;
+  height: 420px;
+  overflow-y: auto;
+}
+
+.modal-card .modal-body .right::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+
+.modal-card .modal-body .right::-webkit-scrollbar-thumb {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.modal-card .modal-body .right h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-card .modal-body .right h4 i {
+  background-color: #ffa500;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-card .modal-footer {
+  display: flex;
+}
+
+.address-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+.address-card i {
+  font-size: 18px;
+  align-self: flex-start;
+  color: #f47174;
+  cursor: pointer;
+}
+
+.addressModal {
+  width: 300px;
+  height: 520px;
+  padding: 15px 15px;
+  background-color: #353535;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  overflow-y: auto;
+}
+
+.addressModal::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.addressModal::-webkit-scrollbar-thumb {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.invalid-feedback {
+  color: #ff7f7f;
+  font-size: 12px;
+}
+
+.addressModal i {
+  font-size: 18px;
+}
+
+.addressModal .mb-3 {
+  margin-bottom: 5px;
+}
+
+.yellow {
+  background-color: #ffa500;
+  border: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.yellow:hover {
+  background-color: #fff;
+  color: #ffa500;
+}
+
+.yellow-border {
+  background-color: transparent;
+  border: 1px solid #ffa500;
+  border-radius: 3px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.yellow-border:hover {
+  background-color: #eee;
+  color: #ffa500;
+}
+
+@media (max-width: 1254px) {
+  .modal-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 821px) {
+  .modal-card:not(.checkout) .modal-body {
+    flex-direction: column;
+    height: 82%;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .modal-card .modal-body .right,
+  .modal-card .modal-body .left {
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 0;
+    height: auto;
+    overflow: initial;
+  }
+
+  .modal-card .modal-body .left {
+    min-height: 320px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-height: 740px) {
+  .modal-card:not(.order, .checkout) .modal-body {
+    flex: none;
+    min-height: 0;
+  }
+}
+
+@media (max-height: 720px) {
+  .modal-card:not(.order, .checkout) .modal-body {
+    height: 79%;
+  }
+}
+
+@media (max-height: 700px) {
+  .modal-card:not(.order, .checkout) .modal-body {
+    flex: none;
+    height: 71%;
+  }
+}

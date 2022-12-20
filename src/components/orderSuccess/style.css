@@ -1,0 +1,35 @@
+.success-modal {
+  width: 300px;
+  height: 350px;
+  background-color: #333;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.success-modal i {
+  font-size: 25px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.success-modal img {
+  width: 140px;
+  object-fit: contain;
+}
+
+.success-modal button {
+  margin-bottom: 10px;
+}
+
+.success-modal p {
+  margin: 0;
+}
